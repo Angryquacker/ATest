@@ -1,8 +1,53 @@
-input {
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+input, form button, .td  {
     margin-bottom: 1.5em;
+    font-size: 1.25em;
+    border: 1px solid gray;
+}
+
+form button {
+    margin-bottom: 0;
+    border: 1px outset gray;
+}
+
+#newCom {
+    float: right;
+    border: 1px outset white;
+}
+
+.td {
+    border: none;
+}
+
+html {
+    background-color: gray;
+}
+
+* {
+    font-family: 'Roboto Slab', serif;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid white;
+    padding: 15px;
+    background-color: lightgray;
+    width: 75%;
 }
 
 #m {
-    background-color: tan;
-    margin: .5em;
+    background-color: lightgray;
+    padding: .75em;
+    margin: 1.25em;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid white;
+}
+
+#t, #extra {
+    border: 1px solid gray;
+    padding: 5px;
 }
