@@ -11,8 +11,8 @@ form button {
     border: 1px outset gray;
 }
 
-#newCom {
-    margin: 0;
+.new {
+    margin-right: 5px;
     float: right;
     border: 1px outset white;
 }
