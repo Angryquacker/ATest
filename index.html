@@ -8,20 +8,35 @@
 </head>
 <body>
             <div ng-app="myApp" ng-controller="myCon">
+            <nav>
+                <button id="newCom" ng-click="newCommunity">Create A New Community</button>
+            </nav>
+            <h1>Create A New Event</h1>
             <form ng-submit='addM()'>
                 <input type='text' required placeholder='Title' id='title'><br />
-                <input type='text' required placeholder='Description' id='text'><br />
+                <input type='text' required placeholder='Description' id='text' minlength="50"><br />
                 <input type='text' required placeholder='Location' id='loc'><br />
-          Time: <input type='time' required id='time'><br />
-          Date: <input type='date' required placeholder='2018-02-15' id='date' format='YYYY-MM-DD'><br />
+          <span class="td">Time:</span> <input type='time' required id='time'><br />
+          <span class="td">Date:</span> <input type='date' required placeholder='2018-02-15' id='date'><br />
                 <button type='submit'>Create</button>
             </form>
-            <br />
+            <hr>
+            <h1>Upcoming Events</h1>
             <div ng-repeat='m in message' id='m'>
                 <h2>{{m.title}}</h2>
-                <p>{{m.text}}</p>
-                <p>Date: {{m.date}} | Time: {{m.time}}</p>
-                <p>Location: {{m.location}}</p>
+                <p id="t">{{m.text}}</p>
+                <div id="extra">
+                    <p>Date: {{m.date}} | Time: {{m.time}}</p>
+                    <p>Location: {{m.location}}</p>
+                </div>
+            </div>
+            <hr>
+            <div id="hotSpots">
+                <h1>Popular Locations</h1>
+            </div>
+            <hr>
+            <div id="popCom">
+                <h1>Popular Communities</h1>
             </div>
             </div>
 </body>
