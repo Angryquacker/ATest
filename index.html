@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
+            <script src="script.js"></script>
+            <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+            <div ng-app="myApp" ng-controller="myCon">
+            <form ng-submit='addM()'>
+                <input type='text' required placeholder='Title' id='title'>
+                <input type='text' required placeholder='Text' id='text'>
+                <input type='text' required placeholder='Location' id='loc'><br />
+          Time: <input type='time' required id='time'><br />
+          Date: <input type='date' required placeholder='2018-02-15' id='date' format='YYYY-MM-DD'><br />
+                <button type='submit'>Create</button>
+            </form>
+            <br />
+            <div ng-repeat='m in message' id='m'>
+                <h2>{{m.title}}</h2>
+                <p>{{m.text}}</p>
+                <p>Date: {{m.date}} | Time: {{m.time}}</p>
+                <p>Location: {{m.location}}</p>
+            </div>
+            </div>
+</body>
+</html>
