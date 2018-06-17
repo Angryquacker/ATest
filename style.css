@@ -32,6 +32,7 @@ html {
 form {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1.25em;
     border: 1px solid white;
     padding: 15px;
     background-color: lightgray;
