@@ -1,4 +1,4 @@
-var ngApp = angular.module("myApp", []);
+let ngApp = angular.module("myApp", []);
                                     
 ngApp.controller('myCon', function($scope) {
     $scope.message = [
@@ -8,7 +8,8 @@ ngApp.controller('myCon', function($scope) {
             date: '1976-02-13',
             location: 'Moravian Hall Square',
             sTime: '08:24',
-            eTime: '09:24'
+            eTime: '09:24',
+            creator: 'TJ'
         }, 
         {
             title: 'Sup',
@@ -16,9 +17,15 @@ ngApp.controller('myCon', function($scope) {
             date: '1976-02-14',
             location: 'Nazareth Circle',
             sTime: '06:54',
-            eTime: '08:00'
+            eTime: '08:00',
+            creator: 'TJ'
         }
     ];
+    
+    $scope.me = {
+        name: 'TJ',
+        id: 1000
+    }; 
     
     $scope.addM = () => {
         let text = document.getElementById('text').value;
@@ -28,7 +35,7 @@ ngApp.controller('myCon', function($scope) {
         let sTime = document.getElementById('sTime').value;
         let eTime = document.getElementById('eTime').value;
         
-        $scope.message.push({title: title, text: text, date: date, location: loc, sTime: sTime, eTime: eTime});
+        $scope.message.push({title: title, text: text, date: date, location: loc, sTime: sTime, eTime: eTime, creator: $scope.me.name});
     };
     
     $scope.newCommunity = () => {

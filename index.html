@@ -9,6 +9,9 @@
 <body>
             <div ng-app="myApp" ng-controller="myCon">
             <nav>
+                <div id="id">
+                    <p class="new" style="margin: 0;border: none">User: {{me.name}}</p>
+                </div>
                 <button class="new" id="joinCom" ng-click="joinCommunity()">Join A Community</button>
                 <button class="new" id="newCom" ng-click="newCommunity()">Create A New Community</button>
             </nav>
@@ -31,6 +34,7 @@
                 <div id="extra">
                     <p>Date: {{m.date}} | Time: {{m.sTime}} - {{m.eTime}}</p>
                     <p>Location: {{m.location}}</p>
+                    <p>Created By: {{m.creator}}</p>
                 </div>
             </div>
             <hr>
