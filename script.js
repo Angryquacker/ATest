@@ -4,14 +4,14 @@ ngApp.controller('myCon', function($scope) {
     $scope.message = [
         {
             title: 'Yo',
-            text: 'cake',
+            text: 'Cake',
             date: '1976-02-13',
             location: 'Moravian Hall Square',
             time: '08:24'
         }, 
         {
             title: 'Sup',
-            text: 'food',
+            text: 'Food',
             date: '1976-02-14',
             location: 'Nazareth Circle',
             time: '06:54'
@@ -26,5 +26,9 @@ ngApp.controller('myCon', function($scope) {
         let time = document.getElementById('time').value;
         
         $scope.message.push({title: title, text: text, date: date, location: loc, time: time});
+    };
+    
+    $scope.newCommunity = () => {
+      
     };
 });
