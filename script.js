@@ -34,4 +34,9 @@ ngApp.controller('myCon', function($scope) {
     $scope.newCommunity = () => {
         alert('Feature In Development');
     };
+    
+    $scope.joinCommunity = () => {
+        alert('Feature In Devleopment');
+    };
+    
 });
