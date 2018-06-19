@@ -6,6 +6,10 @@ input, form button, .td  {
     border: 1px solid gray;
 }
 
+input {
+    width: 50%;
+}
+
 form button {
     margin-bottom: 0;
     border: 1px outset gray;
@@ -52,4 +56,10 @@ form {
 #t, #extra {
     border: 1px solid gray;
     padding: 5px;
+}
+
+#t {
+    height: 5em;
+    overflow: hidden;
+    word-break: break-word;
 }
