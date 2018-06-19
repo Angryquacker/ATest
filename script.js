@@ -35,6 +35,12 @@ ngApp.controller('myCon', function($scope) {
         let sTime = document.getElementById('sTime').value;
         let eTime = document.getElementById('eTime').value;
         
+        for(let i = 0;i < $scope.message.length;i++) {
+            if($scope.message[i].title == title) {
+                return 'Already Exsists';
+            }
+        }
+        
         $scope.message.push({title: title, text: text, date: date, location: loc, sTime: sTime, eTime: eTime, creator: $scope.me.name});
     };
     
@@ -43,7 +49,11 @@ ngApp.controller('myCon', function($scope) {
     };
     
     $scope.joinCommunity = () => {
-        alert('Feature In Devleopment');
+        /* let data = fetch('https://talaikis.com/api/quotes/random/', {
+            method: 'GET' 
+        }).then(response => response.json);
+        alert(JSON.stringify(data.quote)); */
+        alert('Feature In Development');
     };
     
 });
