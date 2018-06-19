@@ -60,6 +60,6 @@ form {
 
 #t {
     height: 5em;
-    overflow: hidden;
+    overflow: scroll;
     word-break: break-word;
 }
